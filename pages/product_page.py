@@ -1,4 +1,4 @@
-import time
+
 from .base_page import BasePage
 from .locators import MainPageLocators
 
@@ -8,13 +8,11 @@ class ProductPage(BasePage):     # Указываем, что это класс-
     def add_product(self):
         button_add_product = self.browser.find_element(*MainPageLocators.ADD_PRODUCT)  #
         button_add_product.click()
-        time.sleep(1)
 
     """Нажимаем Перейти в корзину"""
     def go_basket(self):
         button_basket = self.browser.find_element(*MainPageLocators.GO_BASKET)
         button_basket.click()
-        time.sleep(1)
 
     """Сравниваем названия купленной и покупаемой книг"""
 

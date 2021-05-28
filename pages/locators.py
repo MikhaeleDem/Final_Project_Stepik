@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators():
-    ADD_PRODUCT = (By.CSS_SELECTOR, "button[value='Добавить в корзину']") # Добавить товар в корзину
+    ADD_PRODUCT = (By.CSS_SELECTOR, "#add_to_basket_form > button") # Добавить товар в корзину
     GO_BASKET = (By.CSS_SELECTOR, "[class=icon-shopping-cart]") # Корзина
 
     BOOK_MESSAGE = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div > strong")  # Добавленная книга

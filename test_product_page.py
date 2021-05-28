@@ -1,10 +1,9 @@
-import time
 import pytest
 
 from .pages.base_page import BasePage
 from .pages.product_page import ProductPage
 
-
+@pytest.mark.need_review
 @pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer2",
@@ -24,7 +23,7 @@ def test_guest_can_add_product_to_basket(browser, link):
     alert.solve_quiz_and_get_code()
     page.book_name_add_and_in_basket()
     page.book_price_add_and_in_basket()
-    time.sleep(3)
+
 
 
 
